@@ -13113,6 +13113,8 @@ div#notebook {
 <span class="c1">#CDAccount:Does the customer have a certificate of deposit (CD) account with the bank?</span>
 <span class="c1">#Online: Does the customer use internet banking facilities?</span>
 <span class="c1">#Creditcard:Does the customer use a credit card issued by the bank?</span>
+
+<span class="c1">#Project Git link : https://github.com/GreatLearningAIML1/gl-pgp-aiml-uta-intl-may20-koulvivek/tree/master/Project_Personal_Load_Campaign</span>
 </pre></div>
 
     </div>
@@ -13799,12 +13801,11 @@ dtype: int64
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Number of people with zero credit card spending can be calculated by figuring out number of people not having a </span>
-<span class="c1">#credit card provided by the bank</span>
-<span class="n">credit_data</span> <span class="o">=</span> <span class="n">loanData</span><span class="p">[</span><span class="n">loanData</span><span class="p">[</span><span class="s2">&quot;CreditCard&quot;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Number of people with zero credit card spending can be calculated by figuring avg spending </span>
+<span class="n">credit_data</span> <span class="o">=</span> <span class="n">loanData</span><span class="p">[</span><span class="n">loanData</span><span class="p">[</span><span class="s2">&quot;CCAvg&quot;</span><span class="p">]</span><span class="o">==</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 <span class="c1">#print(credit_data)</span>
 <span class="c1">#print using iloc</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of people with zero credit card spending: </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">credit_data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">13</span><span class="p">]))</span>
@@ -13824,7 +13825,7 @@ dtype: int64
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Number of people with zero credit card spending: 3530
+<pre>Number of people with zero credit card spending: 106
 </pre>
 </div>
 </div>
